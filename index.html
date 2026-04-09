@@ -8,17 +8,17 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #fafafa;
-      color: #333;
+      background: #0a0a0a;
+      color: #e0e0e0;
       line-height: 1.7;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 40px 20px;
     }
     header {
-      border-bottom: 3px solid #333;
+      border-bottom: 2px solid #333;
       padding-bottom: 20px;
       margin-bottom: 30px;
     }
@@ -26,34 +26,36 @@
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 8px;
+      color: #fff;
     }
     .subtitle {
-      color: #666;
+      color: #888;
       font-size: 16px;
     }
     .highlight-box {
-      background: #e8f5e9;
+      background: #1a2f1a;
       border-left: 4px solid #4caf50;
       padding: 16px 20px;
       margin: 24px 0;
       font-size: 15px;
+      color: #c8e6c9;
     }
     .highlight-box strong {
-      color: #2e7d32;
+      color: #81c784;
     }
     h2 {
       font-size: 20px;
       margin: 40px 0 16px 0;
       padding-bottom: 8px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #333;
+      color: #fff;
     }
     .project {
-      background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
       padding: 24px;
       margin: 20px 0;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     .project-header {
       display: flex;
@@ -66,17 +68,18 @@
     .project-title {
       font-size: 18px;
       font-weight: 600;
-      color: #222;
+      color: #fff;
     }
     .project-meta {
       font-size: 13px;
-      color: #666;
-      background: #f5f5f5;
+      color: #888;
+      background: #1a1a1a;
       padding: 4px 10px;
       border-radius: 4px;
+      border: 1px solid #333;
     }
     .project-desc {
-      color: #555;
+      color: #b0b0b0;
       margin-bottom: 16px;
       font-size: 15px;
     }
@@ -88,44 +91,49 @@
     }
     .tag {
       font-size: 12px;
-      background: #f0f0f0;
-      color: #555;
+      background: #1a1a1a;
+      color: #aaa;
       padding: 4px 10px;
       border-radius: 4px;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #333;
     }
     .links {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 16px;
     }
     .links a {
-      color: #1565c0;
+      color: #58a6ff;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
     }
     .links a:hover {
       text-decoration: underline;
+      color: #79c0ff;
     }
     .tool-section {
-      background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
+      background: #141414;
+      border: 1px solid #2a2a2a;
+      border-radius: 12px;
       padding: 20px 24px;
       margin: 20px 0;
     }
     .tool-title {
       font-weight: 600;
       margin-bottom: 8px;
-      color: #444;
+      color: #fff;
     }
     .contact {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #666;
+      border-top: 1px solid #333;
+      color: #888;
       font-size: 14px;
+    }
+    .contact a {
+      color: #58a6ff;
     }
     .status-badge {
       display: inline-block;
@@ -136,25 +144,50 @@
       font-weight: 500;
     }
     .status-online {
-      background: #e8f5e9;
-      color: #2e7d32;
+      background: #1b4d1b;
+      color: #7ee787;
     }
     .status-demo {
-      background: #fff3e0;
-      color: #ef6c00;
+      background: #4d3b1b;
+      color: #ffa657;
     }
-    @media (max-width: 600px) {
-      .container { padding: 20px 16px; }
-      h1 { font-size: 24px; }
-      .project { padding: 16px; }
-      .share-image { width: 100%; }
+    .pdf-container {
+      width: 100%;
+      height: 500px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 16px;
+      background: #1a1a1a;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .pdf-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      color: #888;
+      text-align: center;
+      padding: 20px;
     }
     .share-image {
       width: 100%;
       max-width: 600px;
       border-radius: 8px;
       margin-top: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      border: 1px solid #333;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 20px 16px; }
+      h1 { font-size: 24px; }
+      .project { padding: 16px; }
+      .share-image { width: 100%; }
+      .pdf-container { height: 400px; }
     }
   </style>
 </head>
@@ -189,8 +222,10 @@
         <span class="tag">教育AI产品设计</span>
       </div>
       <div class="links">
-        <a href="https://raw.githubusercontent.com/margcii/portfolio/main/%E7%80%91%E5%B8%83%E6%96%B9%E6%A1%88%E4%B9%A63.24.pdf">📎 方案书PDF</a>
         <a href="https://margcii.github.io/waterfall-demo">🎮 在线演示</a>
+      </div>
+      <div class="pdf-container">
+        <iframe src="%E7%80%91%E5%B8%83%E6%96%B9%E6%A1%88%E4%B9%A63.24.pdf" title="瀑布方案书PDF"></iframe>
       </div>
     </div>
 
@@ -231,8 +266,8 @@
         <span class="tag">数据可视化</span>
         <span class="tag">科学计算</span>
       </div>
-      <div class="links">
-        <a href="https://raw.githubusercontent.com/margcii/portfolio/main/EEG_Analysis_Report.pdf">📊 分析报告PDF</a>
+      <div class="pdf-container">
+        <iframe src="EEG_Analysis_Report.pdf" title="脑电分析报告PDF"></iframe>
       </div>
     </div>
 
@@ -250,7 +285,7 @@
         <span class="tag">社区建设</span>
         <span class="tag">课程设计</span>
       </div>
-      <img src="https://raw.githubusercontent.com/margcii/portfolio/main/vibecoding%E5%88%86%E4%BA%AB.jpg" alt="Vibecoding分享现场" class="share-image">
+      <img src="vibecoding%E5%88%86%E4%BA%AB.jpg" alt="Vibecoding分享现场" class="share-image">
     </div>
 
     <h2>开发方式</h2>
