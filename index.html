@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>margcii - 项目展示</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #fafafa;
+      color: #333;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    header {
+      border-bottom: 3px solid #333;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 16px;
+    }
+    .highlight-box {
+      background: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: 15px;
+    }
+    .highlight-box strong {
+      color: #2e7d32;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 40px 0 16px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    .project {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 20px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+    }
+    .project-meta {
+      font-size: 13px;
+      color: #666;
+      background: #f5f5f5;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .project-desc {
+      color: #555;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      font-size: 12px;
+      background: #f0f0f0;
+      color: #555;
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #e0e0e0;
+    }
+    .links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      color: #1565c0;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .links a:hover {
+      text-decoration: underline;
+    }
+    .tool-section {
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .tool-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #444;
+    }
+    .contact {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+    .status-badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+    .status-online {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .status-demo {
+      background: #fff3e0;
+      color: #ef6c00;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 20px 16px; }
+      h1 { font-size: 24px; }
+      .project { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>margcii</h1>
+      <div class="subtitle">智能科学与技术 · 跨学科项目实践</div>
+    </header>
+
+    <div class="highlight-box">
+      <strong>核心能力：</strong>快速原型验证（一周从0到MVP）/ 认知科学+AI工程跨域整合 / 全栈独立开发 / AI-assisted Development
+    </div>
+
+    <h2>项目经历</h2>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">
+          瀑布流教学系统
+          <span class="status-badge status-demo">可演示Demo</span>
+        </div>
+        <div class="project-meta">1周独立完成</div>
+      </div>
+      <div class="project-desc">
+        基于认知科学理论（工作记忆、认知负荷、生成式学习策略）的AI教学系统原型。核心创新：通过共享Canvas强制学生外化心智模型，AI在"最佳有效时间"介入纠正认知偏差，解决通用LLM"过度帮助"问题。
+      </div>
+      <div class="tags">
+        <span class="tag">React Flow</span>
+        <span class="tag">Vite + TypeScript</span>
+        <span class="tag">认知科学</span>
+        <span class="tag">教育AI产品设计</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/margcii/waterfall-demo">📎 方案书PDF</a>
+        <a href="https://margcii.github.io/waterfall-demo">🎮 在线演示</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">
+          Petri Dish - AI媒介艺术实验
+          <span class="status-badge status-online">已上线</span>
+        </div>
+        <div class="project-meta">2周独立完成</div>
+      </div>
+      <div class="project-desc">
+        使用"真菌隐喻"探索文本传播与AI杂交的交互艺术项目。用户上传文本生成"真菌"，可发射到公共空间传播，两个真菌接触触发AI融合生成新文本。完整实现用户系统、实时状态、AI生成、云端部署。
+      </div>
+      <div class="tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">React + Vite</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">SiliconFlow API</span>
+        <span class="tag">Zeabur部署</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/margcii/petri-dish">📱 代码仓库</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">脑电信号分析与可视化</div>
+        <div class="project-meta">个人实验</div>
+      </div>
+      <div class="project-desc">
+        使用MNE-Python对69岁被试32导联脑电数据进行完整分析流程：数据读取、电极定位、功率谱密度计算、频段拓扑图生成，输出包含发现与建议的专业分析报告。
+      </div>
+      <div class="tags">
+        <span class="tag">MNE-Python</span>
+        <span class="tag">信号处理</span>
+        <span class="tag">数据可视化</span>
+        <span class="tag">科学计算</span>
+      </div>
+      <div class="links">
+        <a href="https://github.com/margcii/eeg-analysis">📊 分析报告PDF</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">Vibecoding方法论分享</div>
+        <div class="project-meta">实验室活动</div>
+      </div>
+      <div class="project-desc">
+        在实验室策划并主讲Agent Coding方法论分享。设计完整课程结构：理论基础（工具对比、记忆系统、workflow设计）+ 实战演示（GitHub Pages部署）+ 进阶实践。推动成立后续学习小组。
+      </div>
+      <div class="tags">
+        <span class="tag">Claude Code</span>
+        <span class="tag">技术传播</span>
+        <span class="tag">社区建设</span>
+        <span class="tag">课程设计</span>
+      </div>
+    </div>
+
+    <h2>开发方式</h2>
+    <div class="tool-section">
+      <div class="tool-title">AI-assisted Development</div>
+      <p>主力使用 Claude Code / RooCode / Cursor 进行全栈开发。具备从概念设计、技术选型、代码实现到云端部署的完整项目落地能力。开发效率：一周内完成可演示的教育AI产品原型。</p>
+    </div>
+
+    <div class="contact">
+      <strong>GitHub:</strong> <a href="https://github.com/margcii">github.com/margcii</a>
+    </div>
+  </div>
+</body>
+</html>
